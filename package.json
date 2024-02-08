@@ -1,0 +1,25 @@
+{
+  "name": "javascript-api",
+  "version": "1.0.0",
+  "description": "api automation script with supertest",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "npx mocha --reporter mochawesome",
+    "suite:booking": "npx mocha --reporter mochawesome module/test/suites/booking.suite.js"
+  },
+  "keywords": [
+    "api"
+  ],
+  "author": "Fadhli",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^5.0.3",
+    "jsonschema": "^1.4.1",
+    "supertest": "^6.3.4"
+  },
+  "devDependencies": {
+    "mocha": "^10.2.0",
+    "mochawesome": "^7.1.3"
+  }
+}

@@ -1,0 +1,147 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 3,
+    "passes": 1,
+    "pending": 0,
+    "failures": 2,
+    "start": "2024-02-08T09:11:28.709Z",
+    "end": "2024-02-08T09:11:30.828Z",
+    "duration": 2119,
+    "testsRegistered": 3,
+    "passPercent": 33.33333333333333,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "47a1bf13-90cf-44fb-95c2-b3747f0e4922",
+      "title": "",
+      "fullFile": "E:\\Training\\SANBERCODE\\QA Automation (batch 53 kelas karyawan)\\Tugas\\Pekanan 2 javascript\\Javascript-API\\module\\test\\suites\\booking.suite.js",
+      "file": "\\module\\test\\suites\\booking.suite.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "344bc760-6bb9-467f-b950-77aa305ff484",
+          "title": "End To End - Booking",
+          "fullFile": "E:\\Training\\SANBERCODE\\QA Automation (batch 53 kelas karyawan)\\Tugas\\Pekanan 2 javascript\\Javascript-API\\module\\test\\suites\\booking.suite.js",
+          "file": "\\module\\test\\suites\\booking.suite.js",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "Succes Create Booking",
+              "fullTitle": "End To End - Booking Succes Create Booking",
+              "timedOut": false,
+              "duration": 1,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "const response = await createBooking()\n\nexpect(( await response).status).to.equal(418)\nbookingId = (await response).body.bookingId",
+              "err": {
+                "message": "ReferenceError: request is not defined",
+                "estack": "ReferenceError: request is not defined\n    at createBooking (file:///E:/Training/SANBERCODE/QA%20Automation%20(batch%2053%20kelas%20karyawan)/Tugas/Pekanan%202%20javascript/Javascript-API/module/test/function/createBooking.spec.js:17:22)\n    at Context.<anonymous> (file:///E:/Training/SANBERCODE/QA%20Automation%20(batch%2053%20kelas%20karyawan)/Tugas/Pekanan%202%20javascript/Javascript-API/module/test/suites/booking.suite.js:14:32)\n    at process.processImmediate (node:internal/timers:478:21)",
+                "diff": null
+              },
+              "uuid": "50df7a1f-ee18-413a-a034-9b1377f1a61f",
+              "parentUUID": "344bc760-6bb9-467f-b950-77aa305ff484",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Succes Get Booking",
+              "fullTitle": "End To End - Booking Succes Get Booking",
+              "timedOut": false,
+              "duration": 1112,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "const response = await getBooking.id(bookingId)\n\nexpect((await response).status).to.equal(404)\nbookingId = (await response).body.bookingId",
+              "err": {},
+              "uuid": "bcf271e7-d446-48b1-8e6c-aa336d62987b",
+              "parentUUID": "344bc760-6bb9-467f-b950-77aa305ff484",
+              "isHook": false,
+              "skipped": false
+            },
+            {
+              "title": "Succes Update Booking",
+              "fullTitle": "End To End - Booking Succes Update Booking",
+              "timedOut": false,
+              "duration": 986,
+              "state": "failed",
+              "speed": null,
+              "pass": false,
+              "fail": true,
+              "pending": false,
+              "context": null,
+              "code": "token = await createToken ()\nconst response = await updateBooking(bookingId,token)\n\nexpect((await response).status).to.equal(200)",
+              "err": {
+                "message": "ReferenceError: request is not defined",
+                "estack": "ReferenceError: request is not defined\n    at updateBooking (file:///E:/Training/SANBERCODE/QA%20Automation%20(batch%2053%20kelas%20karyawan)/Tugas/Pekanan%202%20javascript/Javascript-API/module/test/function/updateBooking.spec.js:5:22)\n    at Context.<anonymous> (file:///E:/Training/SANBERCODE/QA%20Automation%20(batch%2053%20kelas%20karyawan)/Tugas/Pekanan%202%20javascript/Javascript-API/module/test/suites/booking.suite.js:29:32)\n    at process.processTicksAndRejections (node:internal/process/task_queues:95:5)",
+                "diff": null
+              },
+              "uuid": "e5f23a36-b465-4622-aab9-7cd9eea30f7b",
+              "parentUUID": "344bc760-6bb9-467f-b950-77aa305ff484",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "bcf271e7-d446-48b1-8e6c-aa336d62987b"
+          ],
+          "failures": [
+            "50df7a1f-ee18-413a-a034-9b1377f1a61f",
+            "e5f23a36-b465-4622-aab9-7cd9eea30f7b"
+          ],
+          "pending": [],
+          "skipped": [],
+          "duration": 2099,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.2.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}
